@@ -1,0 +1,9 @@
+1 : docker build .
+2: docker run -i sha256:f38f30db98337474af3865dde4e71141ca04a20be2aea99d596ef172a28e114a
+3: docker run -i  --name python-app sha256:f38f30db98337474af3865dde4e71141ca04a20be2aea99d596ef172a28e114a
+docker stop python-app
+docker start python-app
+4 docker container prune
+docker rmi id image
+5 docker build -t python-test
+6 docker run -i  --rm --name python-aa python-test
